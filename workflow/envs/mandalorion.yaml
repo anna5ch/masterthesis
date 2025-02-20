@@ -1,0 +1,9 @@
+name: mandalorion
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - abpoa
+  - bioconda::mappy
+  - numpy

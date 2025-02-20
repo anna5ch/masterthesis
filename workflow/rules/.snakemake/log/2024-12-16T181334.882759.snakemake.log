@@ -1,0 +1,84 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 5
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count    min threads    max threads
+----------  -------  -------------  -------------
+all               1              1              1
+downsample        5              1              1
+total             6              1              1
+
+Select jobs to execute...
+
+[Mon Dec 16 18:13:35 2024]
+rule downsample:
+    input: /home/dwissel/data/seq/kinnex/raw/day5-rep1/sirvs.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day5-rep1/day5-rep1.sirvs.sorted.bam
+    output: /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep1/filtered_sirvs.reads.fastq.gz
+    jobid: 4
+    wildcards: sample=day5-rep1
+    resources: tmpdir=/tmp
+
+
+[Mon Dec 16 18:13:35 2024]
+rule downsample:
+    input: /home/dwissel/data/seq/kinnex/raw/day5-rep3/sirvs.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day5-rep3/day5-rep3.sirvs.sorted.bam
+    output: /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep3/filtered_sirvs.reads.fastq.gz
+    jobid: 6
+    wildcards: sample=day5-rep3
+    resources: tmpdir=/tmp
+
+
+[Mon Dec 16 18:13:35 2024]
+rule downsample:
+    input: /home/dwissel/data/seq/kinnex/raw/day0-rep2/sirvs.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day0-rep2/day0-rep2.sirvs.sorted.bam
+    output: /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep2/filtered_sirvs.reads.fastq.gz
+    jobid: 2
+    wildcards: sample=day0-rep2
+    resources: tmpdir=/tmp
+
+
+[Mon Dec 16 18:13:35 2024]
+rule downsample:
+    input: /home/dwissel/data/seq/kinnex/raw/day0-rep3/sirvs.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day0-rep3/day0-rep3.sirvs.sorted.bam
+    output: /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep3/filtered_sirvs.reads.fastq.gz
+    jobid: 3
+    wildcards: sample=day0-rep3
+    resources: tmpdir=/tmp
+
+
+[Mon Dec 16 18:13:35 2024]
+rule downsample:
+    input: /home/dwissel/data/seq/kinnex/raw/day5-rep2/sirvs.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day5-rep2/day5-rep2.sirvs.sorted.bam
+    output: /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep2/filtered_sirvs.reads.fastq.gz
+    jobid: 5
+    wildcards: sample=day5-rep2
+    resources: tmpdir=/tmp
+
+[Mon Dec 16 18:15:25 2024]
+Finished job 5.
+1 of 6 steps (17%) done
+[Mon Dec 16 18:15:35 2024]
+Finished job 6.
+2 of 6 steps (33%) done
+[Mon Dec 16 18:16:37 2024]
+Finished job 3.
+3 of 6 steps (50%) done
+[Mon Dec 16 18:16:40 2024]
+Finished job 2.
+4 of 6 steps (67%) done
+[Mon Dec 16 18:16:48 2024]
+Finished job 4.
+5 of 6 steps (83%) done
+Select jobs to execute...
+
+[Mon Dec 16 18:16:48 2024]
+localrule all:
+    input: /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep1/filtered_sirvs.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep2/filtered_sirvs.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep3/filtered_sirvs.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep1/filtered_sirvs.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep2/filtered_sirvs.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep3/filtered_sirvs.reads.fastq.gz
+    jobid: 0
+    resources: tmpdir=/tmp
+
+[Mon Dec 16 18:16:48 2024]
+Finished job 0.
+6 of 6 steps (100%) done
+Complete log: /home/anna/mas-seq-discovery/workflow/rules/.snakemake/log/2024-12-16T181334.882759.snakemake.log

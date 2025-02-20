@@ -1,0 +1,9 @@
+name: flair
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - flair
+  - bedtools
+prefix: /home/anna/miniforge3/envs/flair

@@ -1,0 +1,10 @@
+name: flames
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - bioconda::bioconductor-flames
+  - bioconda::gffread
+  - bioconda::gtfsort
+prefix: /home/anna/miniforge3/envs/flames

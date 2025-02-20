@@ -1,0 +1,3 @@
+IndexError in line 6 of /home/anna/mas-seq-discovery/workflow/rules/downsample.smk:
+tuple index out of range
+  File "/home/anna/mas-seq-discovery/workflow/rules/downsample.smk", line 6, in <module>

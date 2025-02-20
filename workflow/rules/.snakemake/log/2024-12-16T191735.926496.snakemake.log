@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in line 25 of /home/anna/mas-seq-discovery/workflow/rules/downsample.smk:
+Missing input files for rule downsample_short:
+/home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day0-rep1-r2.sirvs.reads.fastq.gz
+/home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day0-rep1-r1.sirvs.reads.fastq.gz

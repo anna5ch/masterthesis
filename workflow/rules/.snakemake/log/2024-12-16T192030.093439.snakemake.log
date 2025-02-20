@@ -1,0 +1,15 @@
+Building DAG of jobs...
+MissingInputException in line 2 of /home/anna/mas-seq-discovery/workflow/rules/downsample.smk:
+Missing input files for rule all:
+/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep1-r2.sirvs.fastq.gz
+/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep2-r1.sirvs.fastq.gz
+/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep1-r2.sirvs.fastq.gz
+/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep3-r2.sirvs.fastq.gz
+/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep3-r2.sirvs.fastq.gz
+/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep3-r1.sirvs.fastq.gz
+/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep2-r2.sirvs.fastq.gz
+/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep2-r2.sirvs.fastq.gz
+/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep3-r1.sirvs.fastq.gz
+/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep1-r1.sirvs.fastq.gz
+/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep1-r1.sirvs.fastq.gz
+/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep2-r1.sirvs.fastq.gz

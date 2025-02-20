@@ -1,0 +1,13 @@
+name: isoquant
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - numpy=1.24.4=py38h59b608b_0
+  - pandas
+  - pysam
+  - gffutils
+  - pybedtools
+  - isoquant
+prefix: /home/anna/miniforge3/envs/isoquant

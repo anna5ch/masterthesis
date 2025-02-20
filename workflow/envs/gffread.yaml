@@ -1,0 +1,9 @@
+name: gffread
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - bioconda::gffread
+  - bioconda::gffcompare
+prefix: /home/anna/miniforge3/envs/gffread

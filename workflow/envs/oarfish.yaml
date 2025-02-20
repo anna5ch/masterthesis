@@ -1,0 +1,9 @@
+name: oarfish
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - curl=8.5.0
+  - pandas
+  - typeguard

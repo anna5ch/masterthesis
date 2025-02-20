@@ -1,0 +1,9 @@
+name: salmon
+channels:
+- conda-forge
+- bioconda
+- defaults
+dependencies:
+  - bioconda::salmon
+  - conda-forge::pandas=2.1.4
+  - numpy=1.24.3

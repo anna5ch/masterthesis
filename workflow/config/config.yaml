@@ -1,0 +1,84 @@
+snakemake_min_version: "7.30.1"
+mambaforge_container_version: "docker://condaforge/mambaforge:23.1.0-3"
+snakemake_wrapper_version: "v3.4.1"
+samples: ["day0-rep1", "day0-rep2", "day0-rep3","day5-rep1" , "day5-rep2", "day5-rep3"]
+#"day0-rep1", "day0-rep2", "day0-rep3", "day5-rep1" , "day5-rep2", "day5-rep3"
+# possible tools: "bambu","stringtie", "scallop", "isoseq","isoquant", "mandalorion", "flames", "flair", "stringtie_long"
+requested_tools: ["bambu", "isoquant", "stringtie_long", "stringtie", "flair"]
+requested_tools_short: ["stringtie"]
+#"scallop", "stringtie"
+requested_tools_long: ["bambu", "isoquant", "stringtie_long", "flair" ]
+#"bambu", "isoseq", "isoquant", "stringtie_long", "flames", "flair"
+# possible filtering methods: gene_proportion, CPM, exonic_length, gc_content, ml
+requested_filters: ["gene_proportion", "CPM","gc_content"]
+requested_threshs: [0]
+requested_thresh_removal: [0.25]
+requested_region_removal: ["all"]
+
+quantify_sort_bam_memory_gb: 4
+quantify_sort_bam_threads: 4
+quantify_oarfish_n_bins: 10
+quantify_oarfish_filter_group: "nanocount-filters"
+quantify_map_bam_threads: 22
+quantify_threads: 12
+
+STAR_ncores: 4
+readlength: 63
+run_trimming: True
+run_STAR: True
+star_index_dir: "results/align/sirvs/STAR/"
+additional_star_align: "--outSAMstrandField intronMotif"
+
+gffutils_checklines: 50
+
+#raw_data_path: "/home/dwissel/data/seq/anna/illumina/FASTQ/" # downsampled
+#raw_data_path: "/home/dwissel/data/seq/kinnex/raw/"
+
+
+
+# paths for downsampled SIRVs 
+#datapath: "/home/dwissel/data/seq/anna/kinnex/BAM/"
+#datapath_short: "/home/anna/seq_data/seq/illumina/sirvs_aligned_new/"
+#path_unmapped: "/home/dwissel/data/seq/anna/kinnex/uBAM/"
+#reference_gtf: "/home/dwissel/data/seq/anna/ref/SIRV4.gtf"
+#annotation_gtf_bambu: "/home/dwissel/data/seq/anna/ref/SIRV4_bambu_formatted.gtf"
+#annotation_gtf_isoquant: "/home/dwissel/data/seq/anna/ref/SIRV4_raw.gtf"
+#genome_fasta: "/home/dwissel/data/seq/anna/ref/SIRV4.fasta"
+
+
+#paths for full SIRVs/downsampled (1M reads)
+#datapath: "/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/"
+#datapath_short: "/home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/"
+#path_unmapped: "/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/uBAM/downsampled/"
+#reference_gtf: "/home/dwissel/data/seq/anna/ref/SIRV4.gtf"
+#annotation_gtf_bambu: "/home/dwissel/data/seq/anna/ref/SIRV4_bambu_formatted.gtf"
+#annotation_gtf_isoquant: "/home/dwissel/data/seq/anna/ref/SIRV4_raw.gtf"
+#genome_fasta: "/home/dwissel/data/seq/anna/ref/SIRV4.fasta"
+#dataset: "sirvs"
+#raw_data_path: "/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/"
+#raw_data_path_short: "/home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/downsampled_fastqs/"
+
+# paths for full GENCODE dataset
+#datapath: "/home/anna/seq_data/seq/kinnex/gencode_aligned_new/"
+#datapath_short: "/home/anna/seq_data/seq/illumina/gencode_aligned_new/"
+#path_unmapped: "/home/anna/seq_data/seq/kinnex/gencode_aligned_new/uBAM/"
+#reference_gtf: "/home/dwissel/data/seq/ref/clean/gencode.v45.primary_assembly.annotation.named.gtf"
+#genome_fasta: "/home/dwissel/data/seq/ref/clean/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna"
+#dataset: "gencode"
+
+# paths for downsampled GENCODE dataset (5M reads)
+datapath: "/home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/"
+datapath_short: "/home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/"
+path_unmapped: "/home/anna/seq_data/seq/kinnex/gencode_aligned_new/uBAM/"
+reference_gtf: "/home/anna/seq_data/seq/gencode.v45.primary_assembly.annotation.named.filtered.gtf"
+annotation_gtf_bambu: "/home/anna/seq_data/seq/gencode.v45.primary_assembly.annotation.named.filtered.gtf"
+annotation_gtf_isoquant: "/home/anna/seq_data/seq/gencode.v45.primary_assembly.annotation.named.filtered.gtf"
+genome_fasta: "/home/dwissel/data/seq/ref/clean/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna"
+dataset: "gencode"
+raw_data_path: "/home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/downsampled_fastqs/"
+raw_data_path_short: "/home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/"
+
+blast_fasta: "/home/dwissel/data/seq/ref/clean/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna"
+
+
+

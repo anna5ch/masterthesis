@@ -1,0 +1,2 @@
+SyntaxError in line 3 of /home/anna/mas-seq-discovery/workflow/rules/downsample.smk:
+Unexpected keyword expand in rule definition (downsample.smk, line 3)

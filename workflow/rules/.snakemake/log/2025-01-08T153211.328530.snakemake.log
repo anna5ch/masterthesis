@@ -1,0 +1,171 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                       count    min threads    max threads
+----------------------  -------  -------------  -------------
+all                           1              1              1
+downsample_fastq              6              1              1
+downsample_fastq_short        6              1              1
+total                        13              1              1
+
+Select jobs to execute...
+
+[Wed Jan  8 15:32:11 2025]
+rule downsample_fastq:
+    input: /home/dwissel/data/seq/kinnex/raw/day0-rep3/gencode.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/day0-rep3.gencode.sorted.bam
+    output: /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep3/gencode.fastq.gz
+    jobid: 3
+    wildcards: sample=day0-rep3
+    resources: tmpdir=/tmp
+
+
+[Wed Jan  8 15:32:11 2025]
+rule downsample_fastq:
+    input: /home/dwissel/data/seq/kinnex/raw/day0-rep2/gencode.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/day0-rep2.gencode.sorted.bam
+    output: /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep2/gencode.fastq.gz
+    jobid: 2
+    wildcards: sample=day0-rep2
+    resources: tmpdir=/tmp
+
+
+[Wed Jan  8 15:32:11 2025]
+rule downsample_fastq:
+    input: /home/dwissel/data/seq/kinnex/raw/day5-rep3/gencode.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/day5-rep3.gencode.sorted.bam
+    output: /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep3/gencode.fastq.gz
+    jobid: 6
+    wildcards: sample=day5-rep3
+    resources: tmpdir=/tmp
+
+
+[Wed Jan  8 15:32:11 2025]
+rule downsample_fastq:
+    input: /home/dwissel/data/seq/kinnex/raw/day0-rep1/gencode.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/day0-rep1.gencode.sorted.bam
+    output: /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep1/gencode.fastq.gz
+    jobid: 1
+    wildcards: sample=day0-rep1
+    resources: tmpdir=/tmp
+
+
+[Wed Jan  8 15:32:11 2025]
+rule downsample_fastq_short:
+    input: /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day0-rep2-r1.gencode.fastq.gz, /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day0-rep2-r2.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/day0-rep2.gencode.sorted.bam
+    output: /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep2-r1.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep2-r2.gencode.fastq.gz
+    jobid: 8
+    wildcards: sample=day0-rep2
+    resources: tmpdir=/tmp
+
+
+[Wed Jan  8 15:32:11 2025]
+rule downsample_fastq_short:
+    input: /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day5-rep1-r1.gencode.fastq.gz, /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day5-rep1-r2.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/day5-rep1.gencode.sorted.bam
+    output: /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep1-r1.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep1-r2.gencode.fastq.gz
+    jobid: 10
+    wildcards: sample=day5-rep1
+    resources: tmpdir=/tmp
+
+
+[Wed Jan  8 15:32:11 2025]
+rule downsample_fastq_short:
+    input: /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day5-rep3-r1.gencode.fastq.gz, /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day5-rep3-r2.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/day5-rep3.gencode.sorted.bam
+    output: /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep3-r1.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep3-r2.gencode.fastq.gz
+    jobid: 12
+    wildcards: sample=day5-rep3
+    resources: tmpdir=/tmp
+
+
+[Wed Jan  8 15:32:11 2025]
+rule downsample_fastq:
+    input: /home/dwissel/data/seq/kinnex/raw/day5-rep1/gencode.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/day5-rep1.gencode.sorted.bam
+    output: /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep1/gencode.fastq.gz
+    jobid: 4
+    wildcards: sample=day5-rep1
+    resources: tmpdir=/tmp
+
+
+[Wed Jan  8 15:32:11 2025]
+rule downsample_fastq_short:
+    input: /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day0-rep3-r1.gencode.fastq.gz, /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day0-rep3-r2.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/day0-rep3.gencode.sorted.bam
+    output: /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep3-r1.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep3-r2.gencode.fastq.gz
+    jobid: 9
+    wildcards: sample=day0-rep3
+    resources: tmpdir=/tmp
+
+
+[Wed Jan  8 15:32:11 2025]
+rule downsample_fastq_short:
+    input: /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day5-rep2-r1.gencode.fastq.gz, /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day5-rep2-r2.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/day5-rep2.gencode.sorted.bam
+    output: /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep2-r1.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep2-r2.gencode.fastq.gz
+    jobid: 11
+    wildcards: sample=day5-rep2
+    resources: tmpdir=/tmp
+
+[Wed Jan  8 15:36:26 2025]
+Finished job 8.
+1 of 13 steps (8%) done
+Select jobs to execute...
+
+[Wed Jan  8 15:36:26 2025]
+rule downsample_fastq_short:
+    input: /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day0-rep1-r1.gencode.fastq.gz, /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day0-rep1-r2.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/day0-rep1.gencode.sorted.bam
+    output: /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep1-r1.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep1-r2.gencode.fastq.gz
+    jobid: 7
+    wildcards: sample=day0-rep1
+    resources: tmpdir=/tmp
+
+[Wed Jan  8 15:37:18 2025]
+Finished job 11.
+2 of 13 steps (15%) done
+Select jobs to execute...
+
+[Wed Jan  8 15:37:18 2025]
+rule downsample_fastq:
+    input: /home/dwissel/data/seq/kinnex/raw/day5-rep2/gencode.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/day5-rep2.gencode.sorted.bam
+    output: /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep2/gencode.fastq.gz
+    jobid: 5
+    wildcards: sample=day5-rep2
+    resources: tmpdir=/tmp
+
+[Wed Jan  8 15:37:18 2025]
+Finished job 10.
+3 of 13 steps (23%) done
+[Wed Jan  8 15:37:27 2025]
+Finished job 12.
+4 of 13 steps (31%) done
+[Wed Jan  8 15:37:52 2025]
+Finished job 9.
+5 of 13 steps (38%) done
+[Wed Jan  8 15:40:25 2025]
+Finished job 7.
+6 of 13 steps (46%) done
+[Wed Jan  8 15:47:41 2025]
+Finished job 4.
+7 of 13 steps (54%) done
+[Wed Jan  8 15:48:55 2025]
+Finished job 6.
+8 of 13 steps (62%) done
+[Wed Jan  8 15:50:12 2025]
+Finished job 1.
+9 of 13 steps (69%) done
+[Wed Jan  8 15:51:58 2025]
+Finished job 2.
+10 of 13 steps (77%) done
+[Wed Jan  8 15:52:39 2025]
+Finished job 3.
+11 of 13 steps (85%) done
+[Wed Jan  8 15:56:00 2025]
+Finished job 5.
+12 of 13 steps (92%) done
+Select jobs to execute...
+
+[Wed Jan  8 15:56:00 2025]
+localrule all:
+    input: /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep1/gencode.fastq.gz, /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep2/gencode.fastq.gz, /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep3/gencode.fastq.gz, /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep1/gencode.fastq.gz, /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep2/gencode.fastq.gz, /home/anna/seq_data/seq/kinnex/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep3/gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep1-r1.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep2-r1.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep3-r1.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep1-r1.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep2-r1.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep3-r1.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep1-r2.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep2-r2.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day0-rep3-r2.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep1-r2.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep2-r2.gencode.fastq.gz, /home/anna/seq_data/seq/illumina/gencode_aligned_new/downsampled/downsampled_fastqs/day5-rep3-r2.gencode.fastq.gz
+    jobid: 0
+    resources: tmpdir=/tmp
+
+[Wed Jan  8 15:56:00 2025]
+Finished job 0.
+13 of 13 steps (100%) done
+Complete log: /home/anna/mas-seq-discovery/workflow/rules/.snakemake/log/2025-01-08T153211.328530.snakemake.log

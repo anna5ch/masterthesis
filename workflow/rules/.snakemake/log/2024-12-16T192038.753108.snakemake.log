@@ -1,0 +1,72 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 5
+Rules claiming more threads will be scaled down.
+Job stats:
+job                 count    min threads    max threads
+----------------  -------  -------------  -------------
+all                     1              1              1
+downsample_short        6              1              1
+total                   7              1              1
+
+Select jobs to execute...
+
+[Mon Dec 16 19:20:39 2024]
+rule downsample_short:
+    input: /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day5-rep1-r1.sirvs.fastq.gz, /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day5-rep1-r2.sirvs.fastq.gz, /home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/day5-rep1.sirvs.sorted.bam
+    output: /home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep1-r1.sirvs.fastq.gz, /home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep1-r2.sirvs.fastq.gz
+    jobid: 10
+    wildcards: sample=day5-rep1
+    resources: tmpdir=/tmp
+
+
+[Mon Dec 16 19:20:39 2024]
+rule downsample_short:
+    input: /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day5-rep3-r1.sirvs.fastq.gz, /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day5-rep3-r2.sirvs.fastq.gz, /home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/day5-rep3.sirvs.sorted.bam
+    output: /home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep3-r1.sirvs.fastq.gz, /home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep3-r2.sirvs.fastq.gz
+    jobid: 12
+    wildcards: sample=day5-rep3
+    resources: tmpdir=/tmp
+
+
+[Mon Dec 16 19:20:39 2024]
+rule downsample_short:
+    input: /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day0-rep2-r1.sirvs.fastq.gz, /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day0-rep2-r2.sirvs.fastq.gz, /home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/day0-rep2.sirvs.sorted.bam
+    output: /home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep2-r1.sirvs.fastq.gz, /home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep2-r2.sirvs.fastq.gz
+    jobid: 8
+    wildcards: sample=day0-rep2
+    resources: tmpdir=/tmp
+
+
+[Mon Dec 16 19:20:39 2024]
+rule downsample_short:
+    input: /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day0-rep1-r1.sirvs.fastq.gz, /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day0-rep1-r2.sirvs.fastq.gz, /home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/day0-rep1.sirvs.sorted.bam
+    output: /home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep1-r1.sirvs.fastq.gz, /home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep1-r2.sirvs.fastq.gz
+    jobid: 7
+    wildcards: sample=day0-rep1
+    resources: tmpdir=/tmp
+
+
+[Mon Dec 16 19:20:39 2024]
+rule downsample_short:
+    input: /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day0-rep3-r1.sirvs.fastq.gz, /home/dwissel/data/seq/kinnex/raw/illumina/FASTQ/day0-rep3-r2.sirvs.fastq.gz, /home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/day0-rep3.sirvs.sorted.bam
+    output: /home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep3-r1.sirvs.fastq.gz, /home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep3-r2.sirvs.fastq.gz
+    jobid: 9
+    wildcards: sample=day0-rep3
+    resources: tmpdir=/tmp
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 25 of /home/anna/mas-seq-discovery/workflow/rules/downsample.smk:
+Job Missing files after 5 seconds:
+/home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep1-r2.sirvs.fastq.gz
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 7 completed successfully, but some output files are missing. 7
+Removing output files of failed job downsample_short since they might be corrupted:
+/home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep1-r1.sirvs.fastq.gz
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 25 of /home/anna/mas-seq-discovery/workflow/rules/downsample.smk:
+Job Missing files after 5 seconds:
+/home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep1-r1.sirvs.fastq.gz
+/home/anna/seq_data/seq/illumina/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep1-r2.sirvs.fastq.gz
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 7 completed successfully, but some output files are missing. 7

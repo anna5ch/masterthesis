@@ -1,0 +1,2 @@
+SyntaxError in line 6 of /home/anna/mas-seq-discovery/workflow/rules/downsample.smk:
+invalid syntax. Perhaps you forgot a comma?

@@ -1,0 +1,47 @@
+from snakemake.utils import min_version
+
+
+configfile: "config/config.yaml"
+
+
+min_version(config["snakemake_min_version"])
+
+
+container: config["mambaforge_container_version"]
+
+
+# snakemake --cores 7 --use-conda -n
+
+
+include: "rules/align.smk"
+include: "rules/discover.smk"
+include: "rules/collapse.smk"
+include: "rules/filter.smk"
+include: "rules/quantify.smk"
+include: "rules/visualize.smk"
+
+
+rule all:
+    input:
+        #expand(f"{{results_path}}filtering/{{tool}}/{{sample}}/{{sample}}.{{tool}}_output_quantified.gtf", results_path=config["results_path"], sample=config["samples"], tool=config["tools"])
+        #expand("filter/{tool}/{filter_method}/{thresh}/extended_annotation.gtf",tool=config["requested_tools"],filter_method=config["requested_filters"],thresh=config["requested_threshs"])
+        #expand("results/quantify/oarfish_{tool}_{sample}/oarfish_{tool}_{sample}_with_id.quant", tool=config["requested_tools"], sample=config["samples"])
+        #expand("results/filtering/{tool}/{sample}/salmon_{sample}_output_feature_matrix.tsv", tool=config["requested_tools_short"], sample=config["samples"]),
+        # expand("results/filtering/{tool}/{sample}/salmon_{sample}.{tool}_output_filtered_{requested_filters}_{requested_threshs}.gtf",
+        #     tool=config["requested_tools_short"],
+        #     requested_filters=config["requested_filters"],
+        #     requested_threshs=config["requested_threshs"],
+        #     sample=config["samples"]),
+        # expand("results/filtering/{tool}/{sample}/oarfish_{sample}.{tool}_output_filtered_{requested_filters}_{requested_threshs}.gtf",
+        #     tool=config["requested_tools_long"],
+        #     requested_filters=config["requested_filters"],
+        #     requested_threshs=config["requested_threshs"],
+        #     sample=config["samples"]),
+        "results/visualize/boxplot.png",
+        #expand("results/visualize/benchmark/{sample}_benchmark_plots.png", sample=config["samples"]),
+        #"results/visualize/read_depth_and_reads.png",
+        expand("results/visualize/tpr_fpr_plot_{sample}.png", sample=config["samples"]),
+        expand(
+            "results/visualize/only_new/tpr_fpr_plot_{sample}_only_new.png",
+            sample=config["samples"],
+        ),

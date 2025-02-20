@@ -1,0 +1,8 @@
+name: gffutils
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - gffutils
+prefix: /home/anna/miniforge3/envs/gffutils

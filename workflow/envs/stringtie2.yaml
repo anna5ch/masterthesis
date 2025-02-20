@@ -1,0 +1,8 @@
+name: stringtie2
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - stringtie
+prefix: /home/anna/miniforge3/envs/stringtie2

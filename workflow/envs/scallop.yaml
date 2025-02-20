@@ -1,0 +1,8 @@
+name: scallop
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - scallop=0.10.5
+prefix: /home/anna/miniforge3/envs/scallop

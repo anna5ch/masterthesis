@@ -1,0 +1,114 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 5
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count    min threads    max threads
+----------  -------  -------------  -------------
+all               1              1              1
+downsample        5              1              1
+total             6              1              1
+
+Select jobs to execute...
+
+[Mon Dec 16 18:12:49 2024]
+rule downsample:
+    input: /home/dwissel/data/seq/kinnex/raw/day5-rep1/sirvs.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day5-rep1/day5-rep1.sirvs.sorted.bam
+    output: /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep1/filtered_sirvs.reads.fastq.gz
+    jobid: 4
+    wildcards: sample=day5-rep1
+    resources: tmpdir=/tmp
+
+
+[Mon Dec 16 18:12:49 2024]
+rule downsample:
+    input: /home/dwissel/data/seq/kinnex/raw/day5-rep3/sirvs.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day5-rep3/day5-rep3.sirvs.sorted.bam
+    output: /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep3/filtered_sirvs.reads.fastq.gz
+    jobid: 6
+    wildcards: sample=day5-rep3
+    resources: tmpdir=/tmp
+
+
+[Mon Dec 16 18:12:49 2024]
+rule downsample:
+    input: /home/dwissel/data/seq/kinnex/raw/day0-rep2/sirvs.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day0-rep2/day0-rep2.sirvs.sorted.bam
+    output: /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep2/filtered_sirvs.reads.fastq.gz
+    jobid: 2
+    wildcards: sample=day0-rep2
+    resources: tmpdir=/tmp
+
+
+[Mon Dec 16 18:12:49 2024]
+rule downsample:
+    input: /home/dwissel/data/seq/kinnex/raw/day0-rep3/sirvs.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day0-rep3/day0-rep3.sirvs.sorted.bam
+    output: /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep3/filtered_sirvs.reads.fastq.gz
+    jobid: 3
+    wildcards: sample=day0-rep3
+    resources: tmpdir=/tmp
+
+
+[Mon Dec 16 18:12:49 2024]
+rule downsample:
+    input: /home/dwissel/data/seq/kinnex/raw/day5-rep2/sirvs.reads.fastq.gz, /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day5-rep2/day5-rep2.sirvs.sorted.bam
+    output: /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep2/filtered_sirvs.reads.fastq.gz
+    jobid: 5
+    wildcards: sample=day5-rep2
+    resources: tmpdir=/tmp
+
+Terminating processes on user request, this might take some time.
+[Mon Dec 16 18:12:51 2024]
+[Mon Dec 16 18:12:51 2024]
+[Mon Dec 16 18:12:51 2024]
+[Mon Dec 16 18:12:51 2024]
+[Mon Dec 16 18:12:51 2024]
+Error in rule downsample:
+    jobid: 5
+    output: /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep2/filtered_sirvs.reads.fastq.gz
+    shell:
+        
+        samtools view /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day5-rep2/day5-rep2.sirvs.sorted.bam | cut -f 1 | sort | uniq  > /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day5-rep2/
+        bash scripts/bbmap/filterbyname.sh in=/home/dwissel/data/seq/kinnex/raw/day5-rep2/sirvs.reads.fastq.gz out=/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep2/filtered_sirvs.reads.fastq.gz names=/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day5-rep2/ include=t
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule downsample:
+    jobid: 2
+    output: /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep2/filtered_sirvs.reads.fastq.gz
+    shell:
+        
+        samtools view /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day0-rep2/day0-rep2.sirvs.sorted.bam | cut -f 1 | sort | uniq  > /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day0-rep2/
+        bash scripts/bbmap/filterbyname.sh in=/home/dwissel/data/seq/kinnex/raw/day0-rep2/sirvs.reads.fastq.gz out=/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep2/filtered_sirvs.reads.fastq.gz names=/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day0-rep2/ include=t
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule downsample:
+    jobid: 3
+    output: /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep3/filtered_sirvs.reads.fastq.gz
+    shell:
+        
+        samtools view /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day0-rep3/day0-rep3.sirvs.sorted.bam | cut -f 1 | sort | uniq  > /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day0-rep3/
+        bash scripts/bbmap/filterbyname.sh in=/home/dwissel/data/seq/kinnex/raw/day0-rep3/sirvs.reads.fastq.gz out=/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day0-rep3/filtered_sirvs.reads.fastq.gz names=/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day0-rep3/ include=t
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule downsample:
+    jobid: 6
+    output: /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep3/filtered_sirvs.reads.fastq.gz
+    shell:
+        
+        samtools view /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day5-rep3/day5-rep3.sirvs.sorted.bam | cut -f 1 | sort | uniq  > /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day5-rep3/
+        bash scripts/bbmap/filterbyname.sh in=/home/dwissel/data/seq/kinnex/raw/day5-rep3/sirvs.reads.fastq.gz out=/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep3/filtered_sirvs.reads.fastq.gz names=/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day5-rep3/ include=t
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule downsample:
+    jobid: 4
+    output: /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep1/filtered_sirvs.reads.fastq.gz
+    shell:
+        
+        samtools view /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day5-rep1/day5-rep1.sirvs.sorted.bam | cut -f 1 | sort | uniq  > /home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day5-rep1/
+        bash scripts/bbmap/filterbyname.sh in=/home/dwissel/data/seq/kinnex/raw/day5-rep1/sirvs.reads.fastq.gz out=/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/downsampled_fastqs/day5-rep1/filtered_sirvs.reads.fastq.gz names=/home/anna/seq_data/seq/kinnex/sirvs_full_aligned_new/downsampled/day5-rep1/ include=t
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: /home/anna/mas-seq-discovery/workflow/rules/.snakemake/log/2024-12-16T181248.536589.snakemake.log
