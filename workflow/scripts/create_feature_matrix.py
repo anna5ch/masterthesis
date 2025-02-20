@@ -52,7 +52,6 @@ def get_label(gffcmp_file, kept_ids_file):
     if label_df["label"].sum() == 0:
         # If no matches, set the first label to 1
         label_df.iloc[0, label_df.columns.get_loc("label")] = 1
-
     label_df = label_df.loc[:, ["transcript_id", "label"]].set_index("transcript_id")
     label_df.name = "label"
 
