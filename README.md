@@ -24,7 +24,7 @@ Some tools may require specific installation steps. Please refer to their offici
 - [Scallop](https://github.com/Kingsford-Group/scallop)
 - [StringTie2](https://github.com/gpertea/stringtie)
 - [FLAIR](https://github.com/BrooksLabUCSC/flair)
-- [FLAMES](https://github.com/mritchielab/FLAMES
+- [FLAMES](https://github.com/mritchielab/FLAMES)
 
 
 ## Repository structure
