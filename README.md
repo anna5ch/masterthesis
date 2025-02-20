@@ -31,7 +31,8 @@ Some tools may require specific installation steps. Please refer to their offici
 ```
 📂 workflow
 ├── 📁 rules # Snakemake workflow rules
-├── 📁 scripts # Analysis and evaluation scripts 
+├── 📁 scripts # Analysis and evaluation scripts
+├── 📁 config # Snakemake config and FLAMES config file
 ├── 📁 envs # Conda environment YAML files 
 └── 📄 Snakefile # Main Snakemake workflow file
 ```
